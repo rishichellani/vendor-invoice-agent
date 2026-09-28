@@ -1,0 +1,35 @@
+{
+  "po_number": "PO-20412",
+  "vendor_no": "V-10087",
+  "vendor_name": "Pacific Coast Facility Services, Inc.",
+  "contract_id": "CSA-2024-112",
+  "status": "Open",
+  "issued_date": "2026-06-24",
+  "need_by_date": "2026-12-31",
+  "payment_terms": "Net 30",
+  "currency": "USD",
+  "requested_by": "Gabe Moreno, Facilities Manager",
+  "blanket": true,
+  "vendor_contact": {
+    "address": "2716 S. Grand Ave, Santa Ana, CA 92705",
+    "email": "accounts@pcfacility.example",
+    "phone": "(714) 555-0133"
+  },
+  "line_items": [
+    {
+      "line_no": 1,
+      "sku": "PCF-JAN-MO",
+      "description": "Monthly janitorial services - Irvine HQ & Bldg B (Year 3 rate)",
+      "quantity": 6,
+      "uom": "MO",
+      "unit_price": 8964.61,
+      "amount": 53787.66
+    }
+  ],
+  "subtotal": 53787.66,
+  "freight_allowance": 0.0,
+  "sales_tax_rate": 0.0,
+  "estimated_tax": 0.0,
+  "approved_total": 53787.66,
+  "status_note": "Blanket PO - July through December 2026 (6 months)"
+}

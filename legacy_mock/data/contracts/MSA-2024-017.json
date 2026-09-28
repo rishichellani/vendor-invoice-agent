@@ -1,0 +1,19 @@
+{
+  "contract_id": "MSA-2024-017",
+  "vendor_name": "Northwind Office Supply Co.",
+  "effective_date": "2024-09-01",
+  "expiry_date": "2027-08-31",
+  "payment_terms": "Net 30",
+  "currency": "USD",
+  "rate_card": [
+    {"sku": "PPR-A4-500", "unit_price": 32.50},
+    {"sku": "TNR-HP-58A", "unit_price": 89.00},
+    {"sku": "PEN-GEL-BLK", "unit_price": 8.20}
+  ],
+  "clauses": [
+    "Unit prices are fixed for the contract term; any increase requires a signed amendment.",
+    "Vendor must invoice against a valid purchase order and quote the PO number on the invoice.",
+    "Shipping is included in unit prices; separate freight charges are not billable.",
+    "Invoices are payable Net 30 from the invoice date."
+  ]
+}

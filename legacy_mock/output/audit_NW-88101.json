@@ -1,0 +1,193 @@
+{
+  "status": "Approved",
+  "summary": "The invoice NW-88101 aligns with PO-10482 and contract MSA-2024-017: vendor, SKU, unit prices, quantities, totals, and payment terms all match the agreed terms. No policy or contract violations were identified.",
+  "recommended_actions": [
+    "Approve and schedule payment per Net 30 terms."
+  ],
+  "invoice": {
+    "invoice_number": "NW-88101",
+    "invoice_date": "2026-09-01",
+    "due_date": "2026-10-01",
+    "vendor_name": "Northwind Office Supply Co.",
+    "po_number": "PO-10482",
+    "contract_id": "MSA-2024-017",
+    "currency": "USD",
+    "payment_terms": "Net 30",
+    "subtotal": 2600.0,
+    "tax": 0.0,
+    "shipping": 0.0,
+    "total": 2600.0,
+    "line_items": [
+      {
+        "line_no": 1,
+        "sku": "PPR-A4-500",
+        "description": "A4 copy paper, 500 sheets",
+        "quantity": 40,
+        "unit_price": 32.5,
+        "amount": 1300.0
+      },
+      {
+        "line_no": 2,
+        "sku": "TNR-HP-58A",
+        "description": "HP 58A black toner cartridge",
+        "quantity": 10,
+        "unit_price": 89.0,
+        "amount": 890.0
+      },
+      {
+        "line_no": 3,
+        "sku": "PEN-GEL-BLK",
+        "description": "Gel pens, black (box of 12)",
+        "quantity": 50,
+        "unit_price": 8.2,
+        "amount": 410.0
+      }
+    ]
+  },
+  "purchase_order": {
+    "po_number": "PO-10482",
+    "vendor_name": "Northwind Office Supply Co.",
+    "contract_id": "MSA-2024-017",
+    "currency": "USD",
+    "status": "Open",
+    "issued_date": "2026-08-04",
+    "approved_total": 2600.0,
+    "line_items": [
+      {
+        "line_no": 1,
+        "sku": "PPR-A4-500",
+        "description": "A4 copy paper, 500 sheets (case of 5 reams)",
+        "quantity": 40,
+        "unit_price": 32.5
+      },
+      {
+        "line_no": 2,
+        "sku": "TNR-HP-58A",
+        "description": "HP 58A black toner cartridge",
+        "quantity": 10,
+        "unit_price": 89.0
+      },
+      {
+        "line_no": 3,
+        "sku": "PEN-GEL-BLK",
+        "description": "Gel pens, black (box of 12)",
+        "quantity": 50,
+        "unit_price": 8.2
+      }
+    ]
+  },
+  "contract": {
+    "contract_id": "MSA-2024-017",
+    "vendor_name": "Northwind Office Supply Co.",
+    "effective_date": "2024-09-01",
+    "expiry_date": "2027-08-31",
+    "payment_terms": "Net 30",
+    "currency": "USD",
+    "rate_card": [
+      {
+        "sku": "PPR-A4-500",
+        "unit_price": 32.5
+      },
+      {
+        "sku": "TNR-HP-58A",
+        "unit_price": 89.0
+      },
+      {
+        "sku": "PEN-GEL-BLK",
+        "unit_price": 8.2
+      }
+    ],
+    "clauses": [
+      "Unit prices are fixed for the contract term; any increase requires a signed amendment.",
+      "Vendor must invoice against a valid purchase order and quote the PO number on the invoice.",
+      "Shipping is included in unit prices; separate freight charges are not billable.",
+      "Invoices are payable Net 30 from the invoice date."
+    ]
+  },
+  "findings": [],
+  "line_results": [
+    {
+      "line_no": 1,
+      "sku": "PPR-A4-500",
+      "description": "A4 copy paper, 500 sheets",
+      "inv_qty": 40.0,
+      "po_qty": 40.0,
+      "inv_unit_price": 32.5,
+      "po_unit_price": 32.5,
+      "contract_unit_price": 32.5,
+      "amount": 1300.0,
+      "status": "OK",
+      "notes": []
+    },
+    {
+      "line_no": 2,
+      "sku": "TNR-HP-58A",
+      "description": "HP 58A black toner cartridge",
+      "inv_qty": 10.0,
+      "po_qty": 10.0,
+      "inv_unit_price": 89.0,
+      "po_unit_price": 89.0,
+      "contract_unit_price": 89.0,
+      "amount": 890.0,
+      "status": "OK",
+      "notes": []
+    },
+    {
+      "line_no": 3,
+      "sku": "PEN-GEL-BLK",
+      "description": "Gel pens, black (box of 12)",
+      "inv_qty": 50.0,
+      "po_qty": 50.0,
+      "inv_unit_price": 8.2,
+      "po_unit_price": 8.2,
+      "contract_unit_price": 8.2,
+      "amount": 410.0,
+      "status": "OK",
+      "notes": []
+    }
+  ],
+  "trace": [
+    {
+      "step": "Extract invoice fields",
+      "status": "ok",
+      "detail": "3 line items read via groq."
+    },
+    {
+      "step": "Look up purchase order",
+      "status": "ok",
+      "detail": "Found PO-10482."
+    },
+    {
+      "step": "Look up master contract",
+      "status": "ok",
+      "detail": "Found MSA-2024-017."
+    },
+    {
+      "step": "Load compliance policy",
+      "status": "ok",
+      "detail": "Policy and thresholds loaded from local (data/)."
+    },
+    {
+      "step": "Cross-reference checks",
+      "status": "ok",
+      "detail": "0 issue(s) from rules."
+    },
+    {
+      "step": "Policy review",
+      "status": "ok",
+      "detail": "Completed via groq."
+    },
+    {
+      "step": "Verdict",
+      "status": "ok",
+      "detail": "Approved"
+    }
+  ],
+  "engines": {
+    "extraction": "groq",
+    "review": "groq"
+  },
+  "reference_source": "local (data/)",
+  "source_file": "t.pdf",
+  "audited_at": "2026-09-28T22:50:38"
+}

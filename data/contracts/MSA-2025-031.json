@@ -1,0 +1,65 @@
+{
+  "contract_id": "MSA-2025-031",
+  "contract_type": "goods",
+  "vendor_no": "V-10233",
+  "vendor_name": "Summit Ridge Industrial Supply, Inc.",
+  "effective_date": "2025-02-01",
+  "expiry_date": "2027-01-31",
+  "payment_terms": "2% 10, Net 45",
+  "currency": "USD",
+  "rate_card": [
+    {
+      "sku": "SRI-GLV-N8",
+      "unit_price": 14.75,
+      "uom": "BX"
+    },
+    {
+      "sku": "SRI-ABS-60",
+      "unit_price": 48.9,
+      "uom": "BDL"
+    },
+    {
+      "sku": "SRI-WD40-12",
+      "unit_price": 71.4,
+      "uom": "CS"
+    },
+    {
+      "sku": "SRI-SS316-B",
+      "unit_price": 38.25,
+      "uom": "BX"
+    },
+    {
+      "sku": "SRI-HOSE-34",
+      "unit_price": 212.0,
+      "uom": "RL"
+    },
+    {
+      "sku": "SRI-SAF-GLS",
+      "unit_price": 42.6,
+      "uom": "BX"
+    },
+    {
+      "sku": "SRI-ZNC-AN",
+      "unit_price": 27.8,
+      "uom": "EA"
+    }
+  ],
+  "rules": {
+    "billing_type": "goods",
+    "tax": "taxable",
+    "freight": {
+      "included_at_or_above": 2500.0,
+      "max_per_shipment_below": 95.0
+    }
+  },
+  "clauses": [
+    "Unit prices in Exhibit A are fixed for the term. Any price change requires 60 days' written notice and a signed amendment; unilateral increases are not billable.",
+    "Supplier shall invoice against a valid Halvorsen purchase order, one PO per invoice, quoting the PO number and packing slip number, within 30 days of shipment.",
+    "Freight is included in unit prices on orders of $2,500.00 or more (pre-tax). Separate freight charges on such orders are not billable.",
+    "On orders under $2,500.00, prepaid freight may be added at actual cost, not to exceed $95.00 per shipment.",
+    "Goods are subject to California sales tax at the ship-to rate. Separately stated freight by common carrier is not taxable.",
+    "Supplier may not bill for items not on the purchase order, or for quantities exceeding the purchase order, without a PO change order.",
+    "Payment terms: 2% 10, Net 45 from the later of invoice date or receipt of goods.",
+    "Remittance is by ACH to the bank account in Halvorsen's vendor master. Changes to remittance details must be submitted on Supplier letterhead and are effective only after Halvorsen verifies them by call-back to the contact of record."
+  ]
+}

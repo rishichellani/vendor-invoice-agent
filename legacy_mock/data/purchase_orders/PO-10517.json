@@ -1,0 +1,13 @@
+{
+  "po_number": "PO-10517",
+  "vendor_name": "Apex Facilities Services LLC",
+  "contract_id": "MSA-2023-004",
+  "currency": "USD",
+  "status": "Open",
+  "issued_date": "2026-07-15",
+  "approved_total": 58000.00,
+  "line_items": [
+    {"line_no": 1, "sku": "HVAC-MAINT-Q", "description": "Quarterly HVAC maintenance, HQ building", "quantity": 1, "unit_price": 12000.00},
+    {"line_no": 2, "sku": "JAN-WKLY", "description": "Weekly janitorial service (per month)", "quantity": 3, "unit_price": 15333.33}
+  ]
+}

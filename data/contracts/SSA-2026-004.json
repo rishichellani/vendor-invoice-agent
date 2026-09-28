@@ -1,0 +1,48 @@
+{
+  "contract_id": "SSA-2026-004",
+  "contract_type": "subscription",
+  "vendor_no": "V-10502",
+  "vendor_name": "Corvane Software, Inc.",
+  "effective_date": "2026-09-01",
+  "expiry_date": "2029-08-31",
+  "payment_terms": "Net 45",
+  "currency": "USD",
+  "rate_card": [
+    {
+      "sku": "CVN-ENT-USR",
+      "unit_price": 396.0,
+      "uom": "USR"
+    },
+    {
+      "sku": "CVN-PREM-SUP",
+      "unit_price": 14850.0,
+      "uom": "YR"
+    },
+    {
+      "sku": "CVN-IMPL",
+      "unit_price": 12500.0,
+      "uom": "EA"
+    }
+  ],
+  "rules": {
+    "billing_type": "subscription",
+    "tax": "non_taxable",
+    "milestones": [
+      {
+        "sku": "CVN-IMPL",
+        "total": 12500.0,
+        "payments": [
+          6250.0,
+          6250.0
+        ]
+      }
+    ]
+  },
+  "clauses": [
+    "Subscription fees are billed annually in advance for 250 Enterprise users at $396.00 per user per year, fixed for the initial three-year term.",
+    "Premium support is billed annually in advance at $14,850.00 per year.",
+    "Implementation is a fixed fee of $12,500.00, billed 50% ($6,250.00) on contract start and 50% ($6,250.00) on go-live acceptance.",
+    "Hosted software access is not a transfer of tangible personal property; no sales tax is charged.",
+    "Invoices are payable Net 45 from the invoice date."
+  ]
+}

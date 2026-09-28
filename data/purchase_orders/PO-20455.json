@@ -1,0 +1,52 @@
+{
+  "po_number": "PO-20455",
+  "vendor_no": "V-10233",
+  "vendor_name": "Summit Ridge Industrial Supply, Inc.",
+  "contract_id": "MSA-2025-031",
+  "status": "Open",
+  "issued_date": "2026-09-08",
+  "need_by_date": "2026-09-15",
+  "payment_terms": "2% 10, Net 45",
+  "currency": "USD",
+  "requested_by": "Alan Petrosyan, Maintenance Planner",
+  "blanket": false,
+  "vendor_contact": {
+    "address": "1180 E. Foundry Way, Ontario, CA 91761",
+    "email": "billing@summitridgesupply.example",
+    "phone": "(909) 555-0172"
+  },
+  "line_items": [
+    {
+      "line_no": 1,
+      "sku": "SRI-SAF-GLS",
+      "description": "Safety glasses ANSI Z87.1, clear, box of 12",
+      "quantity": 25,
+      "uom": "BX",
+      "unit_price": 42.6,
+      "amount": 1065.0
+    },
+    {
+      "line_no": 2,
+      "sku": "SRI-ZNC-AN",
+      "description": "Zinc hull anode, 6 lb, bolt-on",
+      "quantity": 40,
+      "uom": "EA",
+      "unit_price": 27.8,
+      "amount": 1112.0
+    },
+    {
+      "line_no": 3,
+      "sku": "SRI-GLV-N8",
+      "description": "Nitrile gloves, 8 mil, box of 100",
+      "quantity": 40,
+      "uom": "BX",
+      "unit_price": 14.75,
+      "amount": 590.0
+    }
+  ],
+  "subtotal": 2767.0,
+  "freight_allowance": 0.0,
+  "sales_tax_rate": 0.0775,
+  "estimated_tax": 214.44,
+  "approved_total": 2981.44
+}

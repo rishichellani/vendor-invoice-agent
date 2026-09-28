@@ -1,0 +1,52 @@
+{
+  "po_number": "PO-20488",
+  "vendor_no": "V-10502",
+  "vendor_name": "Corvane Software, Inc.",
+  "contract_id": "SSA-2026-004",
+  "status": "Open",
+  "issued_date": "2026-08-27",
+  "need_by_date": "2026-09-01",
+  "payment_terms": "Net 45",
+  "currency": "USD",
+  "requested_by": "Priya Raman, Controller",
+  "blanket": false,
+  "vendor_contact": {
+    "address": "1 Market Plaza, Suite 1400, Austin, TX 78701",
+    "email": "billing@corvane.example",
+    "phone": "(512) 555-0110"
+  },
+  "line_items": [
+    {
+      "line_no": 1,
+      "sku": "CVN-ENT-USR",
+      "description": "Fleet Maintenance Cloud - Enterprise users, Yr 1 (9/1/26-8/31/27)",
+      "quantity": 250,
+      "uom": "USR",
+      "unit_price": 396.0,
+      "amount": 99000.0
+    },
+    {
+      "line_no": 2,
+      "sku": "CVN-PREM-SUP",
+      "description": "Premium support, Yr 1",
+      "quantity": 1,
+      "uom": "YR",
+      "unit_price": 14850.0,
+      "amount": 14850.0
+    },
+    {
+      "line_no": 3,
+      "sku": "CVN-IMPL",
+      "description": "Implementation services - fixed fee (2 milestones)",
+      "quantity": 1,
+      "uom": "EA",
+      "unit_price": 12500.0,
+      "amount": 12500.0
+    }
+  ],
+  "subtotal": 126350.0,
+  "freight_allowance": 0.0,
+  "sales_tax_rate": 0.0,
+  "estimated_tax": 0.0,
+  "approved_total": 126350.0
+}

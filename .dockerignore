@@ -1,0 +1,10 @@
+.env
+venv/
+__pycache__/
+output/
+sample_invoices/
+reference_pdfs/
+legacy_mock/
+from cowork/
+.git/
+.DS_Store

@@ -1,0 +1,37 @@
+[
+  {
+    "vendor_no": "V-09871",
+    "legal_name": "Harborview Print & Promotions",
+    "address": "880 W. 16th Street, Costa Mesa, CA 92627",
+    "email": "orders@harborviewprint.example",
+    "phone": "(949) 555-0162"
+  },
+  {
+    "vendor_no": "V-10087",
+    "legal_name": "Pacific Coast Facility Services, Inc.",
+    "address": "2716 S. Grand Ave, Santa Ana, CA 92705",
+    "email": "accounts@pcfacility.example",
+    "phone": "(714) 555-0133"
+  },
+  {
+    "vendor_no": "V-10233",
+    "legal_name": "Summit Ridge Industrial Supply, Inc.",
+    "address": "1180 E. Foundry Way, Ontario, CA 91761",
+    "email": "billing@summitridgesupply.example",
+    "phone": "(909) 555-0172"
+  },
+  {
+    "vendor_no": "V-10418",
+    "legal_name": "Brightline Technology Advisors LLC",
+    "address": "55 Second Street, Floor 9, San Francisco, CA 94105",
+    "email": "ar@brightlineadvisors.example",
+    "phone": "(415) 555-0198"
+  },
+  {
+    "vendor_no": "V-10502",
+    "legal_name": "Corvane Software, Inc.",
+    "address": "1 Market Plaza, Suite 1400, Austin, TX 78701",
+    "email": "billing@corvane.example",
+    "phone": "(512) 555-0110"
+  }
+]

@@ -1,0 +1,251 @@
+{
+  "status": "Rejected",
+  "summary": "The invoice for Northwind Office Supply shows several compliance breaches: quantities exceed the PO, unit price for toner is higher than the contract rate, shipping is charged despite being included, and payment terms differ from the contract. Additionally, the price increase lacks a signed amendment, and the paper description does not match the PO. These issues must be resolved before payment can be approved.",
+  "recommended_actions": [
+    "Request a signed amendment authorizing the toner price increase or adjust the unit price to the contract rate of $89.00.",
+    "Obtain a revised invoice that removes the $75 shipping charge, as shipping is included in unit prices per contract.",
+    "Align the paper quantity to the PO amount of 40 cases or obtain approval for the overage.",
+    "Update the invoice payment terms to Net 30 to match the contract.",
+    "Amend the invoice description for paper to reflect the PO packaging detail or provide justification for the difference."
+  ],
+  "invoice": {
+    "invoice_number": "NW-88102",
+    "invoice_date": "2026-09-05",
+    "due_date": "2026-09-20",
+    "vendor_name": "Northwind Office Supply Co.",
+    "po_number": "PO-10482",
+    "contract_id": null,
+    "currency": "USD",
+    "payment_terms": "Net 15",
+    "subtotal": 2862.5,
+    "tax": 0,
+    "shipping": 75,
+    "total": 2937.5,
+    "line_items": [
+      {
+        "line_no": 1,
+        "sku": "PPR-A4-500",
+        "description": "A4 copy paper, 500 sheets",
+        "quantity": 45,
+        "unit_price": 32.5,
+        "amount": 1462.5
+      },
+      {
+        "line_no": 2,
+        "sku": "TNR-HP-58A",
+        "description": "HP 58A black toner cartridge",
+        "quantity": 10,
+        "unit_price": 99,
+        "amount": 990
+      },
+      {
+        "line_no": 3,
+        "sku": "PEN-GEL-BLK",
+        "description": "Gel pens, black (box of 12)",
+        "quantity": 50,
+        "unit_price": 8.2,
+        "amount": 410
+      }
+    ]
+  },
+  "purchase_order": {
+    "po_number": "PO-10482",
+    "vendor_name": "Northwind Office Supply Co.",
+    "contract_id": "MSA-2024-017",
+    "currency": "USD",
+    "status": "Open",
+    "issued_date": "2026-08-04",
+    "approved_total": 2600.0,
+    "line_items": [
+      {
+        "line_no": 1,
+        "sku": "PPR-A4-500",
+        "description": "A4 copy paper, 500 sheets (case of 5 reams)",
+        "quantity": 40,
+        "unit_price": 32.5
+      },
+      {
+        "line_no": 2,
+        "sku": "TNR-HP-58A",
+        "description": "HP 58A black toner cartridge",
+        "quantity": 10,
+        "unit_price": 89.0
+      },
+      {
+        "line_no": 3,
+        "sku": "PEN-GEL-BLK",
+        "description": "Gel pens, black (box of 12)",
+        "quantity": 50,
+        "unit_price": 8.2
+      }
+    ]
+  },
+  "contract": {
+    "contract_id": "MSA-2024-017",
+    "vendor_name": "Northwind Office Supply Co.",
+    "effective_date": "2024-09-01",
+    "expiry_date": "2027-08-31",
+    "payment_terms": "Net 30",
+    "currency": "USD",
+    "rate_card": [
+      {
+        "sku": "PPR-A4-500",
+        "unit_price": 32.5
+      },
+      {
+        "sku": "TNR-HP-58A",
+        "unit_price": 89.0
+      },
+      {
+        "sku": "PEN-GEL-BLK",
+        "unit_price": 8.2
+      }
+    ],
+    "clauses": [
+      "Unit prices are fixed for the contract term; any increase requires a signed amendment.",
+      "Vendor must invoice against a valid purchase order and quote the PO number on the invoice.",
+      "Shipping is included in unit prices; separate freight charges are not billable.",
+      "Invoices are payable Net 30 from the invoice date."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "category": "Quantity variance",
+      "message": "Line 1: billed 45 vs 40 ordered (+12.5%).",
+      "line_no": 1,
+      "source": "rules"
+    },
+    {
+      "severity": "critical",
+      "category": "Price variance",
+      "message": "Line 2: unit price 99.00 is 11.2% above PO price 89.00.",
+      "line_no": 2,
+      "source": "rules"
+    },
+    {
+      "severity": "critical",
+      "category": "Total variance",
+      "message": "Invoice total exceeds PO approved total by 13.0%.",
+      "line_no": null,
+      "source": "rules"
+    },
+    {
+      "severity": "critical",
+      "category": "Contract amendment",
+      "message": "The unit price for SKU TNR-HP-58A is increased to $99.00 without a signed amendment, violating the contract clause that price changes require an amendment.",
+      "line_no": null,
+      "source": "llm"
+    },
+    {
+      "severity": "warning",
+      "category": "Payment terms",
+      "message": "Invoice terms 'Net 15' differ from contract terms 'Net 30'.",
+      "line_no": null,
+      "source": "rules"
+    },
+    {
+      "severity": "warning",
+      "category": "Contract terms",
+      "message": "Shipping charge of 75.00 billed, but the contract includes shipping in unit prices.",
+      "line_no": null,
+      "source": "rules"
+    },
+    {
+      "severity": "info",
+      "category": "Description mismatch",
+      "message": "Line 1 description on the invoice ('A4 copy paper, 500 sheets') does not include the PO\u2019s packaging detail ('case of 5 reams'), indicating a potential discrepancy in the billed item.",
+      "line_no": null,
+      "source": "llm"
+    }
+  ],
+  "line_results": [
+    {
+      "line_no": 1,
+      "sku": "PPR-A4-500",
+      "description": "A4 copy paper, 500 sheets",
+      "inv_qty": 45.0,
+      "po_qty": 40.0,
+      "inv_unit_price": 32.5,
+      "po_unit_price": 32.5,
+      "contract_unit_price": 32.5,
+      "amount": 1462.5,
+      "status": "Rejected",
+      "notes": [
+        "billed 45 vs 40 ordered (+12.5%)."
+      ]
+    },
+    {
+      "line_no": 2,
+      "sku": "TNR-HP-58A",
+      "description": "HP 58A black toner cartridge",
+      "inv_qty": 10.0,
+      "po_qty": 10.0,
+      "inv_unit_price": 99.0,
+      "po_unit_price": 89.0,
+      "contract_unit_price": 89.0,
+      "amount": 990.0,
+      "status": "Rejected",
+      "notes": [
+        "unit price 99.00 is 11.2% above PO price 89.00."
+      ]
+    },
+    {
+      "line_no": 3,
+      "sku": "PEN-GEL-BLK",
+      "description": "Gel pens, black (box of 12)",
+      "inv_qty": 50.0,
+      "po_qty": 50.0,
+      "inv_unit_price": 8.2,
+      "po_unit_price": 8.2,
+      "contract_unit_price": 8.2,
+      "amount": 410.0,
+      "status": "OK",
+      "notes": []
+    }
+  ],
+  "trace": [
+    {
+      "step": "Extract invoice fields",
+      "status": "ok",
+      "detail": "3 line items read via groq."
+    },
+    {
+      "step": "Look up purchase order",
+      "status": "ok",
+      "detail": "Found PO-10482."
+    },
+    {
+      "step": "Look up master contract",
+      "status": "ok",
+      "detail": "Found MSA-2024-017."
+    },
+    {
+      "step": "Load compliance policy",
+      "status": "ok",
+      "detail": "Policy and thresholds loaded from local (data/)."
+    },
+    {
+      "step": "Cross-reference checks",
+      "status": "ok",
+      "detail": "5 issue(s) from rules."
+    },
+    {
+      "step": "Policy review",
+      "status": "ok",
+      "detail": "Completed via groq."
+    },
+    {
+      "step": "Verdict",
+      "status": "ok",
+      "detail": "Rejected"
+    }
+  ],
+  "engines": {
+    "extraction": "groq",
+    "review": "groq"
+  },
+  "reference_source": "local (data/)",
+  "source_file": "Invoice_NW-88102_errors.pdf",
+  "audited_at": "2026-09-28T22:21:46"
+}

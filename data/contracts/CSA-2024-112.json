@@ -1,0 +1,45 @@
+{
+  "contract_id": "CSA-2024-112",
+  "contract_type": "fixed_fee_services",
+  "vendor_no": "V-10087",
+  "vendor_name": "Pacific Coast Facility Services, Inc.",
+  "effective_date": "2024-07-01",
+  "expiry_date": "2027-06-30",
+  "payment_terms": "Net 30",
+  "currency": "USD",
+  "rate_card": [
+    {
+      "sku": "PCF-JAN-MO",
+      "unit_price": 8450.0,
+      "uom": "MO",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30"
+    },
+    {
+      "sku": "PCF-JAN-MO",
+      "unit_price": 8703.5,
+      "uom": "MO",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30"
+    },
+    {
+      "sku": "PCF-JAN-MO",
+      "unit_price": 8964.61,
+      "uom": "MO",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30"
+    }
+  ],
+  "rules": {
+    "billing_type": "fixed_fee_services",
+    "tax": "non_taxable",
+    "work_order_required_for_extras": true
+  },
+  "clauses": [
+    "Monthly fee for Year 1 is $8,450.00, adjusted on each July 1 by a fixed 3.0% escalator (Year 2: $8,703.50; Year 3: $8,964.61). No other price adjustment applies.",
+    "Contractor bills monthly in advance on the first business day of the service month.",
+    "Additional or out-of-scope work requires a written work order issued by Halvorsen Facilities and a PO line before work begins. Work performed without a work order is not billable.",
+    "Janitorial services under this Agreement are not subject to California sales tax; Contractor shall not add sales tax to invoices.",
+    "Invoices are payable Net 30 from the invoice date."
+  ]
+}

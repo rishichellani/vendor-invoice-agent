@@ -1,0 +1,14 @@
+{
+  "po_number": "PO-10482",
+  "vendor_name": "Northwind Office Supply Co.",
+  "contract_id": "MSA-2024-017",
+  "currency": "USD",
+  "status": "Open",
+  "issued_date": "2026-08-04",
+  "approved_total": 2600.00,
+  "line_items": [
+    {"line_no": 1, "sku": "PPR-A4-500", "description": "A4 copy paper, 500 sheets (case of 5 reams)", "quantity": 40, "unit_price": 32.50},
+    {"line_no": 2, "sku": "TNR-HP-58A", "description": "HP 58A black toner cartridge", "quantity": 10, "unit_price": 89.00},
+    {"line_no": 3, "sku": "PEN-GEL-BLK", "description": "Gel pens, black (box of 12)", "quantity": 50, "unit_price": 8.20}
+  ]
+}

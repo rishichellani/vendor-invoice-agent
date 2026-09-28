@@ -1,0 +1,70 @@
+{
+  "po_number": "PO-20460",
+  "vendor_no": "V-10418",
+  "vendor_name": "Brightline Technology Advisors LLC",
+  "contract_id": "SOW-2026-008",
+  "status": "Open",
+  "issued_date": "2026-07-06",
+  "need_by_date": "2026-12-31",
+  "payment_terms": "Net 30",
+  "currency": "USD",
+  "requested_by": "Priya Raman, Controller",
+  "blanket": true,
+  "vendor_contact": {
+    "address": "55 Second Street, Floor 9, San Francisco, CA 94105",
+    "email": "ar@brightlineadvisors.example",
+    "phone": "(415) 555-0198"
+  },
+  "line_items": [
+    {
+      "line_no": 1,
+      "sku": "BTA-EM",
+      "description": "Engagement Manager - hours (SOW-2026-008)",
+      "quantity": 60,
+      "uom": "HR",
+      "unit_price": 210.0,
+      "amount": 12600.0
+    },
+    {
+      "line_no": 2,
+      "sku": "BTA-SA",
+      "description": "Solution Architect - hours (SOW-2026-008)",
+      "quantity": 140,
+      "uom": "HR",
+      "unit_price": 225.0,
+      "amount": 31500.0
+    },
+    {
+      "line_no": 3,
+      "sku": "BTA-SC",
+      "description": "Senior Consultant - hours (SOW-2026-008)",
+      "quantity": 180,
+      "uom": "HR",
+      "unit_price": 185.0,
+      "amount": 33300.0
+    },
+    {
+      "line_no": 4,
+      "sku": "BTA-AN",
+      "description": "Business Analyst - hours (SOW-2026-008)",
+      "quantity": 80,
+      "uom": "HR",
+      "unit_price": 135.0,
+      "amount": 10800.0
+    },
+    {
+      "line_no": 5,
+      "sku": "BTA-EXP",
+      "description": "Reimbursable travel expenses, at cost (allowance)",
+      "quantity": 1,
+      "uom": "LOT",
+      "unit_price": 7800.0,
+      "amount": 7800.0
+    }
+  ],
+  "subtotal": 96000.0,
+  "freight_allowance": 0.0,
+  "sales_tax_rate": 0.0,
+  "estimated_tax": 0.0,
+  "approved_total": 96000.0
+}

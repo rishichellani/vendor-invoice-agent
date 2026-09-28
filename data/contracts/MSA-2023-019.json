@@ -1,0 +1,38 @@
+{
+  "contract_id": "MSA-2023-019",
+  "contract_type": "goods",
+  "vendor_no": "V-09871",
+  "vendor_name": "Harborview Print & Promotions",
+  "effective_date": "2023-07-01",
+  "expiry_date": "2026-06-30",
+  "payment_terms": "Net 30",
+  "currency": "USD",
+  "rate_card": [
+    {
+      "sku": "HPP-BNR-33",
+      "unit_price": 189.0,
+      "uom": "EA"
+    },
+    {
+      "sku": "HPP-BRO-TRI",
+      "unit_price": 265.0,
+      "uom": "M"
+    },
+    {
+      "sku": "HPP-TBL-6",
+      "unit_price": 310.0,
+      "uom": "EA"
+    }
+  ],
+  "rules": {
+    "billing_type": "goods",
+    "tax": "taxable"
+  },
+  "clauses": [
+    "Prices in Exhibit A are fixed through the term of this Agreement.",
+    "This Agreement expires on June 30, 2026 and does not auto-renew. Renewal requires a written amendment signed by both parties before expiry.",
+    "Vendor shall invoice against a valid, open Halvorsen purchase order.",
+    "Printed goods are subject to California sales tax.",
+    "Invoices are payable Net 30 from the invoice date."
+  ]
+}

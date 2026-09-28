@@ -1,0 +1,17 @@
+{
+  "contract_id": "MSA-2023-004",
+  "vendor_name": "Apex Facilities Services LLC",
+  "effective_date": "2023-03-01",
+  "expiry_date": "2026-02-28",
+  "payment_terms": "Net 45",
+  "currency": "USD",
+  "rate_card": [
+    {"sku": "HVAC-MAINT-Q", "unit_price": 12000.00},
+    {"sku": "JAN-WKLY", "unit_price": 15333.33}
+  ],
+  "clauses": [
+    "Rates are fixed through the contract term.",
+    "Renewal requires written confirmation from Procurement before the expiry date.",
+    "Invoices are payable Net 45 from the invoice date."
+  ]
+}

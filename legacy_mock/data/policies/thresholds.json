@@ -1,0 +1,10 @@
+{
+  "math_tolerance_abs": 0.05,
+  "price_variance_flag_pct": 1.0,
+  "price_variance_reject_pct": 10.0,
+  "quantity_overage_flag_pct": 0.0,
+  "quantity_overage_reject_pct": 10.0,
+  "total_variance_flag_pct": 2.0,
+  "total_variance_reject_pct": 10.0,
+  "manual_approval_amount": 50000.00
+}

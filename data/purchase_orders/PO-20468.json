@@ -1,0 +1,43 @@
+{
+  "po_number": "PO-20468",
+  "vendor_no": "V-10233",
+  "vendor_name": "Summit Ridge Industrial Supply, Inc.",
+  "contract_id": "MSA-2025-031",
+  "status": "Open",
+  "issued_date": "2026-09-14",
+  "need_by_date": "2026-09-22",
+  "payment_terms": "2% 10, Net 45",
+  "currency": "USD",
+  "requested_by": "Alan Petrosyan, Maintenance Planner",
+  "blanket": false,
+  "vendor_contact": {
+    "address": "1180 E. Foundry Way, Ontario, CA 91761",
+    "email": "billing@summitridgesupply.example",
+    "phone": "(909) 555-0172"
+  },
+  "line_items": [
+    {
+      "line_no": 1,
+      "sku": "SRI-HOSE-34",
+      "description": "USCG A1 marine fuel hose 3/4 in x 50 ft",
+      "quantity": 10,
+      "uom": "RL",
+      "unit_price": 212.0,
+      "amount": 2120.0
+    },
+    {
+      "line_no": 2,
+      "sku": "SRI-WD40-12",
+      "description": "WD-40 multi-use lubricant 12 oz, case of 12",
+      "quantity": 12,
+      "uom": "CS",
+      "unit_price": 71.4,
+      "amount": 856.8
+    }
+  ],
+  "subtotal": 2976.8,
+  "freight_allowance": 0.0,
+  "sales_tax_rate": 0.0775,
+  "estimated_tax": 230.7,
+  "approved_total": 3207.5
+}

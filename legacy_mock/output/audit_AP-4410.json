@@ -1,0 +1,192 @@
+{
+  "status": "Rejected",
+  "summary": "The invoice matches the PO amounts and pricing, but it is tied to a purchase order that was issued after the underlying master contract expired and without the required renewal confirmation. Additionally, the invoice omits the contract reference, reducing traceability.",
+  "recommended_actions": [
+    "Obtain written renewal confirmation for contract MSA-2023-004 before any further services are billed.",
+    "Cancel or amend PO-10517 to reference a valid, in\u2011force contract or create a new PO under a renewed agreement.",
+    "Reject the current invoice until the PO and contract issues are resolved and the invoice is updated to include the contract ID.",
+    "Ensure manual approval by the Controller is obtained for any invoice equal to or exceeding $50,000 once the contract/PO issues are cleared."
+  ],
+  "invoice": {
+    "invoice_number": "AP-4410",
+    "invoice_date": "2026-09-10",
+    "due_date": "2026-10-25",
+    "vendor_name": "Apex Facilities Services LLC",
+    "po_number": "PO-10517",
+    "contract_id": null,
+    "currency": "USD",
+    "payment_terms": "Net 45",
+    "subtotal": 57999.99,
+    "tax": 0.0,
+    "shipping": 0.0,
+    "total": 57999.99,
+    "line_items": [
+      {
+        "line_no": 1,
+        "sku": "HVAC-MAINT-Q",
+        "description": "Quarterly HVAC maintenance, HQ building",
+        "quantity": 1,
+        "unit_price": 12000.0,
+        "amount": 12000.0
+      },
+      {
+        "line_no": 2,
+        "sku": "JAN-WKLY",
+        "description": "Weekly janitorial service (per month)",
+        "quantity": 3,
+        "unit_price": 15333.33,
+        "amount": 45999.99
+      }
+    ]
+  },
+  "purchase_order": {
+    "po_number": "PO-10517",
+    "vendor_name": "Apex Facilities Services LLC",
+    "contract_id": "MSA-2023-004",
+    "currency": "USD",
+    "status": "Open",
+    "issued_date": "2026-07-15",
+    "approved_total": 58000.0,
+    "line_items": [
+      {
+        "line_no": 1,
+        "sku": "HVAC-MAINT-Q",
+        "description": "Quarterly HVAC maintenance, HQ building",
+        "quantity": 1,
+        "unit_price": 12000.0
+      },
+      {
+        "line_no": 2,
+        "sku": "JAN-WKLY",
+        "description": "Weekly janitorial service (per month)",
+        "quantity": 3,
+        "unit_price": 15333.33
+      }
+    ]
+  },
+  "contract": {
+    "contract_id": "MSA-2023-004",
+    "vendor_name": "Apex Facilities Services LLC",
+    "effective_date": "2023-03-01",
+    "expiry_date": "2026-02-28",
+    "payment_terms": "Net 45",
+    "currency": "USD",
+    "rate_card": [
+      {
+        "sku": "HVAC-MAINT-Q",
+        "unit_price": 12000.0
+      },
+      {
+        "sku": "JAN-WKLY",
+        "unit_price": 15333.33
+      }
+    ],
+    "clauses": [
+      "Rates are fixed through the contract term.",
+      "Renewal requires written confirmation from Procurement before the expiry date.",
+      "Invoices are payable Net 45 from the invoice date."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "category": "contract compliance",
+      "message": "Purchase Order PO-10517 was issued on 2026-07-15 after the contract MSA-2023-004 expired on 2026-02-28 and without the written renewal confirmation required by the contract clauses, making the PO invalid.",
+      "line_no": null,
+      "source": "llm"
+    },
+    {
+      "severity": "warning",
+      "category": "Contract validity",
+      "message": "Invoice dated 2026-09-10 is after contract MSA-2023-004 expired on 2026-02-28.",
+      "line_no": null,
+      "source": "rules"
+    },
+    {
+      "severity": "warning",
+      "category": "Approval limit",
+      "message": "Invoice total 57,999.99 is at or above the 50,000 manual-approval limit.",
+      "line_no": null,
+      "source": "rules"
+    },
+    {
+      "severity": "info",
+      "category": "documentation",
+      "message": "The invoice does not include the contract ID (contract_id is null), which hampers audit traceability and conflicts with best\u2011practice expectations for three\u2011way matching.",
+      "line_no": null,
+      "source": "llm"
+    }
+  ],
+  "line_results": [
+    {
+      "line_no": 1,
+      "sku": "HVAC-MAINT-Q",
+      "description": "Quarterly HVAC maintenance, HQ building",
+      "inv_qty": 1.0,
+      "po_qty": 1.0,
+      "inv_unit_price": 12000.0,
+      "po_unit_price": 12000.0,
+      "contract_unit_price": 12000.0,
+      "amount": 12000.0,
+      "status": "OK",
+      "notes": []
+    },
+    {
+      "line_no": 2,
+      "sku": "JAN-WKLY",
+      "description": "Weekly janitorial service (per month)",
+      "inv_qty": 3.0,
+      "po_qty": 3.0,
+      "inv_unit_price": 15333.33,
+      "po_unit_price": 15333.33,
+      "contract_unit_price": 15333.33,
+      "amount": 45999.99,
+      "status": "OK",
+      "notes": []
+    }
+  ],
+  "trace": [
+    {
+      "step": "Extract invoice fields",
+      "status": "ok",
+      "detail": "2 line items read via groq."
+    },
+    {
+      "step": "Look up purchase order",
+      "status": "ok",
+      "detail": "Found PO-10517."
+    },
+    {
+      "step": "Look up master contract",
+      "status": "ok",
+      "detail": "Found MSA-2023-004."
+    },
+    {
+      "step": "Load compliance policy",
+      "status": "ok",
+      "detail": "Policy and thresholds loaded from local (data/)."
+    },
+    {
+      "step": "Cross-reference checks",
+      "status": "ok",
+      "detail": "2 issue(s) from rules."
+    },
+    {
+      "step": "Policy review",
+      "status": "ok",
+      "detail": "Completed via groq."
+    },
+    {
+      "step": "Verdict",
+      "status": "ok",
+      "detail": "Rejected"
+    }
+  ],
+  "engines": {
+    "extraction": "groq",
+    "review": "groq"
+  },
+  "reference_source": "local (data/)",
+  "source_file": "Invoice_AP-4410_expired_contract.pdf",
+  "audited_at": "2026-09-28T22:20:53"
+}

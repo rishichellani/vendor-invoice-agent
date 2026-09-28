@@ -1,0 +1,16 @@
+# secrets and local config
+.env
+.streamlit/secrets.toml
+
+# environments and caches
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# generated audit reports (invoice history lives here at run time)
+output/*
+!output/.gitkeep
+
+# raw import folder (organized copies are in sample_invoices/ and reference_pdfs/)
+from cowork/

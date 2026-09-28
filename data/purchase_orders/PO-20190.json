@@ -1,0 +1,53 @@
+{
+  "po_number": "PO-20190",
+  "vendor_no": "V-09871",
+  "vendor_name": "Harborview Print & Promotions",
+  "contract_id": "MSA-2023-019",
+  "status": "Closed",
+  "issued_date": "2026-05-12",
+  "need_by_date": "2026-06-05",
+  "payment_terms": "Net 30",
+  "currency": "USD",
+  "requested_by": "Kelsey Brandt, Director of Marketing",
+  "blanket": false,
+  "vendor_contact": {
+    "address": "880 W. 16th Street, Costa Mesa, CA 92627",
+    "email": "orders@harborviewprint.example",
+    "phone": "(949) 555-0162"
+  },
+  "line_items": [
+    {
+      "line_no": 1,
+      "sku": "HPP-BNR-33",
+      "description": "Retractable banner stand 33x81 in, printed",
+      "quantity": 6,
+      "uom": "EA",
+      "unit_price": 189.0,
+      "amount": 1134.0
+    },
+    {
+      "line_no": 2,
+      "sku": "HPP-BRO-TRI",
+      "description": "Tri-fold brochure 8.5x11, 100# gloss (per 1,000)",
+      "quantity": 5,
+      "uom": "M",
+      "unit_price": 265.0,
+      "amount": 1325.0
+    },
+    {
+      "line_no": 3,
+      "sku": "HPP-TBL-6",
+      "description": "6 ft fitted table throw, full color",
+      "quantity": 2,
+      "uom": "EA",
+      "unit_price": 310.0,
+      "amount": 620.0
+    }
+  ],
+  "subtotal": 3079.0,
+  "freight_allowance": 0.0,
+  "sales_tax_rate": 0.0775,
+  "estimated_tax": 238.62,
+  "approved_total": 3317.62,
+  "status_note": "CLOSED 2026-07-15 - final receipt and invoice matched (INV HPP-5388)."
+}

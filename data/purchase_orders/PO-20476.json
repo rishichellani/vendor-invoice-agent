@@ -1,0 +1,52 @@
+{
+  "po_number": "PO-20476",
+  "vendor_no": "V-10233",
+  "vendor_name": "Summit Ridge Industrial Supply, Inc.",
+  "contract_id": "MSA-2025-031",
+  "status": "Open",
+  "issued_date": "2026-09-02",
+  "need_by_date": "2026-09-10",
+  "payment_terms": "2% 10, Net 45",
+  "currency": "USD",
+  "requested_by": "Renee Albright, EHS Coordinator",
+  "blanket": false,
+  "vendor_contact": {
+    "address": "1180 E. Foundry Way, Ontario, CA 91761",
+    "email": "billing@summitridgesupply.example",
+    "phone": "(909) 555-0172"
+  },
+  "line_items": [
+    {
+      "line_no": 1,
+      "sku": "SRI-SAF-GLS",
+      "description": "Safety glasses ANSI Z87.1, clear, box of 12",
+      "quantity": 10,
+      "uom": "BX",
+      "unit_price": 42.6,
+      "amount": 426.0
+    },
+    {
+      "line_no": 2,
+      "sku": "SRI-ABS-60",
+      "description": "Oil-only absorbent pads 15x19 in, bundle of 100",
+      "quantity": 8,
+      "uom": "BDL",
+      "unit_price": 48.9,
+      "amount": 391.2
+    },
+    {
+      "line_no": 3,
+      "sku": "SRI-ZNC-AN",
+      "description": "Zinc hull anode, 6 lb, bolt-on",
+      "quantity": 24,
+      "uom": "EA",
+      "unit_price": 27.8,
+      "amount": 667.2
+    }
+  ],
+  "subtotal": 1484.4,
+  "freight_allowance": 95.0,
+  "sales_tax_rate": 0.0775,
+  "estimated_tax": 115.04,
+  "approved_total": 1694.44
+}

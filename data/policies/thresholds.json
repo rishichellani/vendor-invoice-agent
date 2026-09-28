@@ -1,0 +1,40 @@
+{
+  "math_tolerance_abs": 0.05,
+  "price_variance_flag_pct": 1.0,
+  "price_variance_reject_pct": 10.0,
+  "quantity_overage_flag_pct": 0.0,
+  "quantity_overage_reject_pct": 10.0,
+  "total_variance_flag_pct": 2.0,
+  "total_variance_reject_pct": 10.0,
+  "sales_tax_rate": 0.0775,
+  "late_submission_days": 90,
+  "duplicate_amount_window_days": 30,
+  "expenses": {
+    "lodging_per_night": 275.0,
+    "meals_per_day": 75.0,
+    "receipt_threshold": 25.0,
+    "max_pct_of_fees": 10.0
+  },
+  "approval_tiers": [
+    {
+      "below": 10000.0,
+      "approver": "AP Manager",
+      "manual": false
+    },
+    {
+      "below": 50000.0,
+      "approver": "Department Director",
+      "manual": false
+    },
+    {
+      "below": 250000.0,
+      "approver": "Corporate Controller",
+      "manual": true
+    },
+    {
+      "below": null,
+      "approver": "Chief Financial Officer",
+      "manual": true
+    }
+  ]
+}

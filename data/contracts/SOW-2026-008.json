@@ -1,0 +1,58 @@
+{
+  "contract_id": "SOW-2026-008",
+  "contract_type": "time_and_materials",
+  "vendor_no": "V-10418",
+  "vendor_name": "Brightline Technology Advisors LLC",
+  "effective_date": "2026-07-01",
+  "expiry_date": "2026-12-31",
+  "payment_terms": "Net 30",
+  "currency": "USD",
+  "not_to_exceed": 96000.0,
+  "rate_card": [
+    {
+      "sku": "BTA-EM",
+      "unit_price": 210.0,
+      "uom": "HR"
+    },
+    {
+      "sku": "BTA-SA",
+      "unit_price": 225.0,
+      "uom": "HR"
+    },
+    {
+      "sku": "BTA-SC",
+      "unit_price": 185.0,
+      "uom": "HR"
+    },
+    {
+      "sku": "BTA-AN",
+      "unit_price": 135.0,
+      "uom": "HR"
+    }
+  ],
+  "rules": {
+    "billing_type": "time_and_materials",
+    "tax": "non_taxable",
+    "expenses": {
+      "sku_prefixes": [
+        "BTA-EXP"
+      ],
+      "lodging_per_night": 275.0,
+      "meals_per_day": 75.0,
+      "receipt_threshold": 25.0,
+      "max_pct_of_fees": 10.0,
+      "airfare_class": "economy",
+      "markup_allowed": false
+    }
+  },
+  "clauses": [
+    "Fees are billed on a time-and-materials basis at the hourly rates in Exhibit A, which are fixed for the SOW term.",
+    "Total fees and expenses under this SOW shall not exceed $96,000.00 (NTE) without a signed change order.",
+    "Consultant invoices monthly in arrears, with a timesheet summary by role and resource.",
+    "Reimbursable expenses are billed at actual cost with no markup, administrative or handling fee. Receipts are required for any item of $25.00 or more.",
+    "Air travel: economy class only. Lodging: up to $275.00 per night. Meals: per diem up to $75.00 per day.",
+    "Reimbursable expenses in any invoice may not exceed 10% of the fees billed on that invoice without prior written approval from the Controller.",
+    "Professional services are not subject to sales tax.",
+    "Invoices are payable Net 30 from the invoice date."
+  ]
+}
