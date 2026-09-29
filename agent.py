@@ -129,14 +129,45 @@ def _pdf_images(data, limit=3):
     return out
 
 
+class LLMUnavailableError(RuntimeError):
+    """Neither AI engine could serve the request. `str(exc)` is written for end users."""
+
+    def __init__(self, message, rate_limited):
+        super().__init__(message)
+        self.rate_limited = rate_limited
+
+
+def _is_rate_limited(exc):
+    text = f"{type(exc).__name__} {exc}"
+    return getattr(exc, "status_code", None) == 429 or any(
+        marker in text for marker in ("RateLimit", "429", "RESOURCE_EXHAUSTED", "Request too large"))
+
+
+def _unavailable(gemini_exc, groq_exc):
+    limited = _is_rate_limited(gemini_exc) or _is_rate_limited(groq_exc)
+    if limited:
+        message = ("The AI engines are out of quota or rate-limited right now (free-tier limits on Gemini and Groq), "
+                   "so this invoice could not be read. Wait for the limit to reset (usually within 24 hours) or "
+                   "enable billing on the API key, then run this invoice again.")
+    else:
+        message = ("The AI engines could not read this invoice "
+                   f"(Gemini: {type(gemini_exc).__name__}; Groq: {type(groq_exc).__name__}). "
+                   "Please try again; if it keeps failing, check the API keys and the file.")
+    return LLMUnavailableError(message, limited)
+
+
 def call_llm(prompt, file=None):
     """Returns (json_dict, engine). Any Gemini failure -- 429, 503, bad JSON,
-    anything -- is logged and retried once on Groq instead of crashing."""
+    anything -- is logged and retried on Groq instead of crashing. If Groq fails too,
+    raises LLMUnavailableError with a plain-language explanation."""
     try:
         return _call_gemini(prompt, file), "gemini"
-    except Exception as exc:
-        logger.warning("Gemini failed (%s: %s); falling back to Groq (%s).", type(exc).__name__, exc, GROQ_MODEL)
-        return _call_groq(prompt, file), "groq"
+    except Exception as gemini_exc:
+        logger.warning("Gemini failed (%s: %s); falling back to Groq (%s).", type(gemini_exc).__name__, gemini_exc, GROQ_MODEL)
+        try:
+            return _call_groq(prompt, file), "groq"
+        except Exception as groq_exc:
+            raise _unavailable(gemini_exc, groq_exc) from groq_exc
 
 
 # --------------------------------------------------------------------------
@@ -327,7 +358,8 @@ def audit_invoice(file_bytes, mime_type, filename="invoice", store: ReferenceSto
         step("Policy review", "ok", f"Completed via {engines['review']}.")
     except Exception as exc:
         logger.warning("Policy review failed: %s", exc)
-        step("Policy review", "warning", f"Skipped, rules-only verdict ({type(exc).__name__}: {exc}).")
+        reason = "the AI engines are rate-limited" if getattr(exc, "rate_limited", False) else f"{type(exc).__name__}"
+        step("Policy review", "warning", f"AI review skipped ({reason}); this is a rules-only verdict.")
 
     # 5. verdict
     worst = max((f["severity"] for f in findings), key=_SEVERITY_RANK.get, default=INFO)
